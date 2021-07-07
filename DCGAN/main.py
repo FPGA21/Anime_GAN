@@ -23,7 +23,7 @@ def main():
                         help="number of dataset in every train or test iteration")
     parse.add_argument("--dataset", type=str, default="faces",
                         help="base path for dataset")
-    parse.add_argument("--epochs", type=int, default=500,
+    parse.add_argument("--epochs", type=int, default=50,
                         help="number of training epochs")
     parse.add_argument("--loaders", type=int, default=4,
                         help="number of parallel data loading processing")
