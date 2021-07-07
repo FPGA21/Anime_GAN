@@ -10,6 +10,7 @@ import scipy.misc
 import os, argparse
 from tqdm import tqdm
 from utils import creat_gif, visualize_loss
+import imageio
 
 def main():
 
