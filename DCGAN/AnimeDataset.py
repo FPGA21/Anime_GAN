@@ -17,7 +17,7 @@ class AnimeDataset(torch.utils.data.Dataset):
         path = self.data_files[ind]
         img =  imageio.imread(path)
         img = (img.transpose(2,0,1)-127.5)/127.5
-        return img
+        return np.asarray(img)
 
     def __len__(self):
         return len(self.data_files)
