@@ -131,7 +131,7 @@ def main():
                     display_grid[j*96:(j+1)*96,k*96:(k+1)*96,:] = (img[k+8*j].transpose(1, 2, 0)+1)/2
 
             img_save_path = os.path.join(os.getcwd(),"saved/img/{}.png".format(epoch))
-            scipy.misc.imsave(img_save_path, display_grid)
+            imageio.imwrite(img_save_path, display_grid)
 
     creat_gif("evolution.gif", os.path.join(os.getcwd(),"saved/img"))
 
