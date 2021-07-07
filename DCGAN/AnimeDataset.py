@@ -1,6 +1,7 @@
 import torch,torch.utils.data
 import numpy as np 
 import scipy.misc, os
+import imageio
 
 class AnimeDataset(torch.utils.data.Dataset):
     def __init__(self, directory, dataset, size_per_dataset):
@@ -14,7 +15,7 @@ class AnimeDataset(torch.utils.data.Dataset):
         
     def __getitem__(self, ind):
         path = self.data_files[ind]
-        img = scipy.misc.imread(path)
+        img =  imageio.imread(path)
         img = (img.transpose(2,0,1)-127.5)/127.5
         return img
 
